@@ -15,7 +15,7 @@ Env
 
 # Installation
 1 - Clonez le dépôt Git :
-git clone https://github.com/votre-nom-utilisateur/votre-projet.git
+git clone https://github.com/FionaGarde/TP-Tips.git
 
 2 - Accédez au répertoire du projet :
 cd votre-projet
@@ -35,67 +35,27 @@ Votre serveur devrait être opérationnel et écouter sur le port spécifié dan
 
 - Tips récupéré
 
-GET /api/tips : Récupère la liste des tips.
-
-POST /api/tips : Crée un nouveau tip.
-
-GET /api/tips/:id : Récupère un tip spécifique.
-
-PUT /api/tips/:id : Met à jour un tip spécifique.
-
-DELETE /api/tips/:id : Supprime un tip spécifique.
+CRUD
 
 
 - Tips à verser
 
-GET /api/tips : Récupère le montant des tips.
-
-POST /api/tips : Crée un nouveau tip.
-
-GET /api/tips/:id : Récupère un tip spécifique.
-
-PUT /api/tips/:id : Met à jour un tip spécifique.
-
-DELETE /api/tips/:id : Supprime un tip spécifique.
+CRUD
 
 
 - Services
 
-GET /api/services : Récupère la liste des services.
-
-POST /api/services : Crée un nouveau service.
-
-GET /api/services/:id : Récupère un service spécifique.
-
-PUT /api/services/:id : Met à jour un service spécifique.
-
-DELETE /api/services/:id : Supprime un service spécifique.
+CRUD
 
 
 - Personnel (Users)
 
-GET /api/users : Récupère la liste des utilisateurs.
-
-POST /api/users : Crée un nouvel utilisateur.
-
-GET /api/users/:id : Récupère un utilisateur spécifique.
-
-PUT /api/users/:id : Met à jour un utilisateur spécifique.
-
-DELETE /api/users/:id : Supprime un utilisateur spécifique (sans perte de données).
+CRUD : Supprime un utilisateur spécifique (sans perte de données).
 
 
 - Table
 
-GET /api/tables : Récupère la liste des tables.
-
-POST /api/table : Crée une nouvelle table.
-
-GET /api/tables/:id : Récupère une table spécifique.
-
-PUT /api/tables/:id : Met à jour une table spécifique.
-
-DELETE /api/table/:id : Supprime une table spécifique.
+CRUD
 
 
 - Authentification Admin
