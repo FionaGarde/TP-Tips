@@ -828,6 +828,49 @@
 					"response": []
 				},
 				{
+					"name": "GET /admin/:admin_id/tableTips",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "Super article",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tableTips/:tableTip_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tableTips",
+								":tableTip_id"
+							],
+							"variable": [
+								{
+									"key": "tableTip_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "POST /tableTips/:tableTip_id",
 					"request": {
 						"method": "POST",
@@ -976,7 +1019,7 @@
 			"name": "ADMIN",
 			"item": [
 				{
-					"name": "/admin/register",
+					"name": "POST /admin/register",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -995,7 +1038,7 @@
 					"response": []
 				},
 				{
-					"name": "/admin/login",
+					"name": "POST /admin/login",
 					"request": {
 						"method": "POST",
 						"header": [],
