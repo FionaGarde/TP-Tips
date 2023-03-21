@@ -27,7 +27,7 @@ npm install
 Consultez le fichier .env.example pour voir la structure requise.
 
 5 - Démarrez le serveur de développement :
-npm run dev
+docker compose up
 
 Votre serveur devrait être opérationnel et écouter sur le port spécifié dans le fichier .env.
 
@@ -37,26 +37,21 @@ Votre serveur devrait être opérationnel et écouter sur le port spécifié dan
 
 CRUD
 
-
 - Tips à verser
 
 CRUD
-
 
 - Services
 
 CRUD
 
-
 - Personnel (Users)
 
 CRUD : Supprime un utilisateur spécifique (sans perte de données).
 
-
 - Table
 
 CRUD
-
 
 - Authentification Admin
 
