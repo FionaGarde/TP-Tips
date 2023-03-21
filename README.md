@@ -3,15 +3,9 @@
 Ce projet permet de gérer les tips et les services dans un restaurant. Il offre un CRUD pour les tips récupéré, les tips a verser, les services, les tables et le personnel, ainsi qu'une authentification JWT pour les administrateurs. L'application devra être écrite en node en utilisant les package ci-dessous
 
 # Prérequis - Package
-Node.js
+Node, Nodemon Mongoose, Jsonwebtoken, Express, Env
 
-MongoDB
-
-Jsonwebtoken
-
-Express
-
-Env
+Docker
 
 # Installation
 1 - Clonez le dépôt Git :
