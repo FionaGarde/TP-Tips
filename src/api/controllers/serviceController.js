@@ -1,9 +1,9 @@
 
-const Admin = require('../models/adminModel');
 const Service = require('../models/serviceModel');
+const jwt = require('jsonwebtoken');
 
 exports.listAllServices = (req, res) => {
-    Service.find({admin_id: req.params.admin_id}, (error, services) => {
+    Service.find((error, services) => {
         if (error) {
             res.status(500);
             console.log(error);
@@ -18,28 +18,19 @@ exports.listAllServices = (req, res) => {
 
 exports.createAService = (req, res) => {
 
-    Service.findById(req.params.admin_id, (error, admin) => {
+    let newService = new Service(req.body);
+
+    newService.save((error, service) => {
         if (error) {
-            res.status(401);
+             res.status(401);
             console.log(error);
             res.json({ message: "Reqûete invalide." });
         }
         else {
-            let newService = new Service({...req.body, admin_id: req.params.admin_id});
-          
-            newService.save((error, service) => {
-                if (error) {
-                    res.status(401);
-                    console.log(error);
-                    res.json({ message: "Reqûete invalide." });
-                }
-                else {
-                    res.status(201);
-                    res.json(service);
-                }
-            })
+            res.status(201);
+            res.json(service);
         }
-    })
+        })
 }
 
 exports.getAService = (req, res) => {

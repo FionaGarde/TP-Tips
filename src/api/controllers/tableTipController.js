@@ -1,5 +1,4 @@
 
-const Admin = require('../models/adminModel');
 const RestaurantTable = require('../models/restaurantTableModel');
 const Service = require('../models/serviceModel');
 
@@ -21,28 +20,19 @@ exports.listAllTableTips = (req, res) => {
 
 exports.createATableTip = (req, res) => {
 
-    TableTip.findById(req.params.admin_id, (error, admin) => {
+    let newTableTip = new TableTip(req.body);
+
+    newTableTip.save((error, tableTip) => {
         if (error) {
-            res.status(401);
+             res.status(401);
             console.log(error);
             res.json({ message: "Reqûete invalide." });
         }
         else {
-            let newTableTip = new TableTip({...req.body, admin_id: req.params.admin_id});
-          
-            newTableTip.save((error, tableTip) => {
-                if (error) {
-                    res.status(401);
-                    console.log(error);
-                    res.json({ message: "Reqûete invalide." });
-                }
-                else {
-                    res.status(201);
-                    res.json(tableTip);
-                }
-            })
+            res.status(201);
+            res.json(tableTip);
         }
-    })
+        })
 }
 
 exports.getATableTip = (req, res) => {

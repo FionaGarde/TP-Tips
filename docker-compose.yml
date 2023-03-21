@@ -26,5 +26,5 @@ services:
     networks:
       - tp-project
 networks:
-  api-project:
+  tp-project:
     driver: bridge
