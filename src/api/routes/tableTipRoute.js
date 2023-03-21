@@ -4,7 +4,7 @@ module.exports = (server) => {
     
     const jwtMiddleware = require('../middlewares/jwtMiddleware');
 
-    server.route("/admin/:admin_id/users")
+    server.route("/admin/:admin_id/tableTips")
     .get(jwtMiddleware.verifyToken, tableTipController.listAllTableTipsMounth);
   
     
