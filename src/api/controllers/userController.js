@@ -1,5 +1,4 @@
 const User = require('../models/userModel');
-const jwt = require('jsonwebtoken');
 
 exports.listAllUsers = (req, res) => {
     User.find({ active: true}, (error, users) => {

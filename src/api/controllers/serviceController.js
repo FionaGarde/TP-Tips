@@ -1,6 +1,5 @@
 
 const Service = require('../models/serviceModel');
-const jwt = require('jsonwebtoken');
 
 exports.listAllServices = (req, res) => {
     Service.find((error, services) => {

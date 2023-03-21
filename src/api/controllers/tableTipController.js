@@ -1,4 +1,5 @@
 
+const { count } = require('console');
 const RestaurantTable = require('../models/restaurantTableModel');
 const Service = require('../models/serviceModel');
 
@@ -14,6 +15,20 @@ exports.listAllTableTips = (req, res) => {
         else {
             res.status(200);
             res.json(tableTips);
+        }
+    })
+}
+
+exports.listAllTableTipsMounth = (req, res) => {
+    TableTip.find((error, tableTips) => {
+        if (error) {
+            res.status(500);
+            console.log(error);
+            res.json({ message: "Erreur serveur." });
+        }
+        else {
+            res.status(200);
+            res.json(Date.TableTip(count(tableTips)));
         }
     })
 }
