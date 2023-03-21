@@ -1,0 +1,1019 @@
+{
+	"info": {
+		"_postman_id": "11956e50-f9ac-439f-8829-37dfb622fa54",
+		"name": "Tips",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17982546"
+	},
+	"item": [
+		{
+			"name": "SERVICES",
+			"item": [
+				{
+					"name": "GET /services/:service_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "Super article",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/services/:service_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								":service_id"
+							],
+							"variable": [
+								{
+									"key": "service_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /admin/:admin_id/services",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "cool dfgdf",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/services",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"services"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /services/:service_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services/:service_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								":service_id"
+							],
+							"variable": [
+								{
+									"key": "service_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /admin/:admin_id/services",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "toto",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/services",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"services"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /admin/:admin_id/services",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pincode",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/services",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"services"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PERSONNELS",
+			"item": [
+				{
+					"name": "GET /users/:user_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "Super article",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/users/:user_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /admin/:admin_id/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "cool dfgdf",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"users"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /users/:user_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/:user_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /users/:user_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "toto",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/users/:user_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /admin/:admin_id/users",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pincode",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"users"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TABLES",
+			"item": [
+				{
+					"name": "GET /restaurantTables/:restaurantTable_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "Super article",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/restaurantTables/:restaurantTable_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurantTables",
+								":restaurantTable_id"
+							],
+							"variable": [
+								{
+									"key": "restaurantTable_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /restaurantTables/:restaurantTable_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "cool dfgdf",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/restaurantTables/:restaurantTable_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurantTables",
+								":restaurantTable_id"
+							],
+							"variable": [
+								{
+									"key": "restaurantTable_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /restaurantTables/:restaurantTable_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/restaurantTables/:restaurantTable_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurantTables",
+								":restaurantTable_id"
+							],
+							"variable": [
+								{
+									"key": "restaurantTable_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /restaurantTables/:restaurantTable_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "toto",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000//restaurantTables/:restaurantTable_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"",
+								"restaurantTables",
+								":restaurantTable_id"
+							],
+							"variable": [
+								{
+									"key": "restaurantTable_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /restaurantTables/:restaurantTable_id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pincode",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/restaurantTables/:restaurantTable_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"restaurantTables",
+								":restaurantTable_id"
+							],
+							"variable": [
+								{
+									"key": "restaurantTable_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TIPS_PAYMENT",
+			"item": [
+				{
+					"name": "GET /admin/:admin_id/tips",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "Super article",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"tips"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /admin/:admin_id/tips",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "cool dfgdf",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"tips"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /admin/:admin_id/tips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"tips"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /admin/:admin_id/tips",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "toto",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"tips"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /admin/:admin_id/tips",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pincode",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/admin/:admin_id/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								":admin_id",
+								"tips"
+							],
+							"variable": [
+								{
+									"key": "admin_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TABLE_TIPS",
+			"item": [
+				{
+					"name": "GET /tableTips/:tableTip_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "Super article",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tableTips/:tableTip_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tableTips",
+								":tableTip_id"
+							],
+							"variable": [
+								{
+									"key": "tableTip_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /tableTips/:tableTip_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jacques",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "cool dfgdf",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tableTips/:tableTip_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tableTips",
+								":tableTip_id"
+							],
+							"variable": [
+								{
+									"key": "tableTip_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /tableTips/:tableTip_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tableTips/:tableTip_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tableTips",
+								":tableTip_id"
+							],
+							"variable": [
+								{
+									"key": "tableTip_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /tableTips/:tableTip_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "toto",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tableTips/:tableTip_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tableTips",
+								":tableTip_id"
+							],
+							"variable": [
+								{
+									"key": "tableTip_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /tableTips/:tableTip_id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pincode",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tableTips/:tableTip_id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tableTips",
+								":tableTip_id"
+							],
+							"variable": [
+								{
+									"key": "tableTip_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "/admin/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/admin/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/admin/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
