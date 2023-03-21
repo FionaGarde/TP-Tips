@@ -18,7 +18,7 @@ cd votre-projet
 npm install
 
 4 - Créez un fichier .env à la racine du projet avec les informations d'identification de votre base de données MongoDB et le secret JWT.
-Consultez le fichier .env.example pour voir la structure requise.
+Consultez le fichier .env pour voir la structure requise.
 
 5 - Démarrez le serveur de développement :
 docker compose up
