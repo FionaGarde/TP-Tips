@@ -1,9 +1,7 @@
-
-const Admin = require('../models/adminModel');
 const RestaurantTable = require('../models/restaurantTableModel');
 
 exports.listAllRestaurantTables = (req, res) => {
-    RestaurantTable.find({admin_id: req.params.admin_id}, (error, restaurantTables) => {
+    RestaurantTable.find((error, restaurantTables) => {
         if (error) {
             res.status(500);
             console.log(error);
@@ -17,32 +15,23 @@ exports.listAllRestaurantTables = (req, res) => {
 }
 
 exports.createARestaurantTable = (req, res) => {
+    
+    let newRestaurantTable = new RestaurantTable(req.body);
 
-    RestaurantTable.findById(req.params.admin_id, (error, admin) => {
+    newRestaurantTable.save((error, restaurantTable) => {
         if (error) {
-            res.status(401);
+             res.status(401);
             console.log(error);
             res.json({ message: "Reqûete invalide." });
         }
         else {
-            let newRestaurantTable = new RestaurantTable({...req.body, admin_id: req.params.admin_id});
-          
-            newRestaurantTable.save((error, restaurantTable) => {
-                if (error) {
-                    res.status(401);
-                    console.log(error);
-                    res.json({ message: "Reqûete invalide." });
-                }
-                else {
-                    res.status(201);
-                    res.json(restaurantTable);
-                }
-            })
+            res.status(201);
+            res.json(restaurantTable);
         }
-    })
+        })
 }
 
-exports.getAtableRestaurantTable = (req, res) => {
+exports.getARestaurantTable = (req, res) => {
     RestaurantTable.findById(req.params.restaurantTable_id, (error, restaurantTable) => {
         if (error) {
             res.status(500);

@@ -2,7 +2,7 @@ module.exports = (server) => {
 
     const adminController = require("../controllers/adminController");
 
-    server.post("/admin/register", adminController.adminRegister);
-    server.post("/admin/login", adminController.adminLogin);
+    server.post("/admin/register", adminController.AdminRegister);
+    server.post("/admin/login", adminController.LoginRegister);
 
 }

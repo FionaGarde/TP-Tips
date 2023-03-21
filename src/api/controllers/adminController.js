@@ -12,12 +12,12 @@ exports.AdminRegister = (req, res) => {
         }
         else {
             res.status(201);
-            res.json({ message: `Administrteur créé : ${admin.pincode}`});
+            res.json({ message: "Administrteur créé"});
         }
     })
 }
 
-exports.loginRegister = (req, res) => {
+exports.LoginRegister = (req, res) => {
     //find admin
     Admin.findOne({pincode : req.body.pincode}, (error, admin) => {
         if (error || admin == null) {

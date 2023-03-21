@@ -1,9 +1,8 @@
-
-const Admin = require('../models/adminModel');
 const User = require('../models/userModel');
+const jwt = require('jsonwebtoken');
 
 exports.listAllUsers = (req, res) => {
-    User.find((error, users) => {
+    User.find({ active: true}, (error, users) => {
         if (error) {
             res.status(500);
             console.log(error);
@@ -18,32 +17,23 @@ exports.listAllUsers = (req, res) => {
 
 exports.createAUser = (req, res) => {
 
-    User.findById(req.params.admin_id, (error, admin) => {
+    let newUser = new User(req.body);
+
+    newUser.save((error, user) => {
         if (error) {
-            res.status(401);
+             res.status(401);
             console.log(error);
             res.json({ message: "Reqûete invalide." });
         }
         else {
-            let newUser = new User({...req.body, admin_id: req.params.admin_id});
-          
-            newUser.save((error, user) => {
-                if (error) {
-                    res.status(401);
-                    console.log(error);
-                    res.json({ message: "Reqûete invalide." });
-                }
-                else {
-                    res.status(201);
-                    res.json(user);
-                }
-            })
+            res.status(201);
+            res.json(user);
         }
-    })
+        })
 }
 
 exports.getAUser = (req, res) => {
-    User.findById({admin_id: req.params.admin_id}, req.params.user_id, (error, user) => {
+    User.findById(req.params.user_id, (error, user) => {
         if (error) {
             res.status(500);
             console.log(error);
@@ -57,7 +47,7 @@ exports.getAUser = (req, res) => {
 }
 
 exports.updateAUser = (req, res) => {
-    User.findByIdAndUpdate({admin_id: req.params.admin_id}, req.params.user_id, req.body, { new: true }, (error, user) => {
+    User.findByIdAndUpdate(req.params.user_id, req.body, { new: true }, (error, user) => {
         if (error) {
             res.status(500);
             console.log(error);
@@ -70,8 +60,8 @@ exports.updateAUser = (req, res) => {
     })
 }
 
-exports.deleteATUser = (req, res) => {
-    User.findByIdAndRemove({admin_id: req.params.admin_id}, req.params.user_id, (error) => {
+exports.deleteAUser = (req, res) => {
+    User.findByIdAndRemove({ active: false}, req.params.user_id, (error) => {
         if (error) {
             res.status(500);
             console.log(error);
