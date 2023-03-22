@@ -1,5 +1,6 @@
 
 const Service = require('../models/serviceModel');
+const payload = require('../middlerwares/jwtMiddleware');
 
 exports.listAllServices = (req, res) => {
     Service.find((error, services) => {
@@ -19,7 +20,7 @@ exports.createAService = (req, res) => {
 
     let newService = new Service(req.body);
 
-    newService.save((error, service) => {
+    newService.save({admin_id:payload.id}, (error, service) => {
         if (error) {
              res.status(401);
             console.log(error);
@@ -47,7 +48,7 @@ exports.getAService = (req, res) => {
 }
 
 exports.updateAService = (req, res) => {
-    Service.findByIdAndUpdate(req.params.service_id, req.body, { new: true }, (error, service) => {
+    Service.findByIdAndUpdate({admin_id:payload.id}, req.body, { new: true }, (error, service) => {
         if (error) {
             res.status(500);
             console.log(error);

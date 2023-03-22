@@ -33,7 +33,8 @@ exports.LoginRegister = (req, res) => {
                     pincode: admin.pincode,
                     role: "admin"
                 }
-                jwt.sign(admin, process.env.JWT_KEY, {expiresIn : "30days"}, (error, token) => {
+                console.log(admin);
+                jwt.sign(adminLogin, process.env.JWT_KEY, {expiresIn : "30days"}, (error, token) => {
                     if (error) {
                         res.status(500);
                         console.log(error);
