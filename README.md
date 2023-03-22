@@ -54,5 +54,5 @@ POST /api/admin : Authentifie un administrateur et génère un token JWT.
 # [Contribution](https://github.com/FionaGarde/TP-Tips/blob/main/CONTRIBUTING.md)
 Pour contribuer à ce projet, veuillez soumettre une pull request avec vos modifications. Assurez-vous de respecter les conventions de code et les exigences du projet.
 
-# Licence
-Ce projet est distribué sous une licence open source. Consultez le fichier [LICENSE](https://github.com/FionaGarde/TP-Tips/blob/main/LICENSE) pour plus d'informations.
+# [Licence](https://github.com/FionaGarde/TP-Tips/blob/main/LICENSE)
+Ce projet est distribué sous une licence open source. Consultez le fichier LICENSE pour plus d'informations.
