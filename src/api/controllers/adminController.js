@@ -28,7 +28,7 @@ exports.LoginRegister = (req, res) => {
         else {
             //admin found
             if(admin.pincode == req.body.pincode) {
-                let admin = {
+                let adminLogin = {
                     id: admin._id,
                     pincode: admin.pincode,
                     role: "admin"

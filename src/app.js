@@ -15,7 +15,7 @@ server.use(express.json());
 const adminRoute = require("./api/routes/adminRoute");
 adminRoute(server);
 
-const restaurantTableRoute = require("./api/routes/restaurantTableRoute");
+/*const restaurantTableRoute = require("./api/routes/restaurantTableRoute");
 restaurantTableRoute(server);
 
 const serviceRoute = require("./api/routes/serviceRoute");
@@ -28,7 +28,7 @@ const tipsPaymentRoute = require("./api/routes/tipsPaymentRoute");
 tipsPaymentRoute(server);
 
 const userRoute = require("./api/routes/userRoute");
-userRoute(server);
+userRoute(server);*/
 
 server.listen(port,hostname, () => {
     console.log(`Serveur qui tourne sur le port ${port}`)
