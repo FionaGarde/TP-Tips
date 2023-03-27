@@ -10,7 +10,7 @@
 			"name": "SERVICES",
 			"item": [
 				{
-					"name": "GET /services/:service_id",
+					"name": "GET /services",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -33,61 +33,56 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/services/:service_id",
+							"raw": "localhost:3000/services",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"services",
-								":service_id"
-							],
-							"variable": [
-								{
-									"key": "service_id",
-									"value": null
-								}
+								"services"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "POST /admin/:admin_id/services",
+					"name": "POST /admin/services",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
-						"header": [],
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MWFjMGFkMjZmODlhZmJjODI0MzUyMCIsInBpbmNvZGUiOjIyMDMyMywicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc5NDgwOTI4LCJleHAiOjE2ODIwNzI5Mjh9.xOrGi5YfqvwoTYgIZcL5dGElb7wY7aT5ko65tCZ9gWI",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "name",
-									"value": "Jacques",
+									"key": "shiftType",
+									"value": "2",
 									"type": "default"
 								},
 								{
-									"key": "message",
-									"value": "cool dfgdf",
+									"key": "shiftClosed",
+									"value": "0",
 									"type": "default"
 								}
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/admin/:admin_id/services",
+							"raw": "localhost:3000/admin/services",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"admin",
-								":admin_id",
 								"services"
-							],
-							"variable": [
-								{
-									"key": "admin_id",
-									"value": null
-								}
 							]
 						}
 					},
@@ -95,9 +90,16 @@
 				},
 				{
 					"name": "GET /services/:service_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
 							"raw": "localhost:3000/services/:service_id",
 							"host": [
@@ -250,7 +252,13 @@
 					"name": "POST /admin/:admin_id/users",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
@@ -328,20 +336,14 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/users/:user_id",
+							"raw": "localhost:3000/users/iuhhuuhuhuh",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"users",
-								":user_id"
-							],
-							"variable": [
-								{
-									"key": "user_id",
-									"value": null
-								}
+								"iuhhuuhuhuh"
 							]
 						}
 					},
@@ -851,18 +853,19 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/tableTips/:tableTip_id",
+							"raw": "localhost:3000/admin/:admin_id/tableTips",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"tableTips",
-								":tableTip_id"
+								"admin",
+								":admin_id",
+								"tableTips"
 							],
 							"variable": [
 								{
-									"key": "tableTip_id",
+									"key": "admin_id",
 									"value": null
 								}
 							]
@@ -1023,6 +1026,16 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pincode",
+									"value": "220323",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
 							"raw": "localhost:3000/admin/register",
 							"host": [
@@ -1042,6 +1055,16 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pincode",
+									"value": "220323",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
 							"raw": "localhost:3000/admin/login",
 							"host": [
