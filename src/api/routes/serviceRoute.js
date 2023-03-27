@@ -3,7 +3,7 @@ module.exports = (server) => {
     const serviceController = require("../controllers/serviceController");
     const jwtMiddleware = require('../middlewares/jwtMiddleware');
 
-    server.route("/admin/:admin_id/services")
+    server.route("/admin/services")
     .post(jwtMiddleware.verifyToken, serviceController.createAService)
     .put(jwtMiddleware.verifyToken, serviceController.updateAService)
     .delete(jwtMiddleware.verifyToken, serviceController.deleteAService);
